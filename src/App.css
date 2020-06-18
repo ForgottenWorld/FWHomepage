@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
 @font-face {
   font-family: Minecrafter;
   src: url(./fonts/minecrafter.ttf);
+}
+
+@keyframes growFadeIn {
+  0% {
+    opacity: 0;
+    max-height: 0px;
+  }
+
+  100% {
+    opacity: 1;
+    max-height: 400px;
+  }
 }
 
 .app {
@@ -8,16 +22,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background: url(bg.jpg);
-  padding: 32px;
   box-sizing: border-box;
 }
 
 .logo {
   display: flex;
   width: 420px;
+  opacity: 1;
+  transition: width linear 200ms, height linear 200ms, opacity linear 200ms;
+}
+
+.logo.shrunk {
+  width: 160px;
+  opacity: 0.9;
 }
 
 .logo-container {
@@ -25,6 +44,41 @@
   flex: 0 0 320;
   padding: 32px;
   justify-content: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  font-family: Minecrafter;
+  font-size: 1.2rem;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px 32px;
+  overflow: hidden;
+  color: white;
+  margin-top: 32px;
+  max-width: 600px;
+  border-radius: 8px;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  animation: growFadeIn linear 400ms;
+}
+
+.page-actions {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.close-page {
+  color: #cccccc;
+  font-size: 1.4rem;
+  transition: color linear 100ms;
+  cursor: pointer;
+}
+
+.close-page:hover {
+  color: white;
 }
 
 .navbar {
@@ -35,21 +89,47 @@
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
-.navbar-link {
+.launcher-page {
+  min-width: 700px;
+} 
+
+.launcher-info {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.launcher-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+}
+
+.tos {
+  color: orange;
+  cursor: pointer;
+}
+
+.navbar-link, .btn-launcher {
   display: flex;
   justify-content: center;
   background-color: rgba(0,0,0,0.5);
   padding: 20px 32px;
   cursor: pointer;
   user-select: none;
-  color: orange;
+  color: #dddddd;
   text-shadow: 0 2px 3px rgba(0,0,0,0.2);
   transition: background-color linear 100ms, color linear 100ms;
 }
 
-.navbar-link:hover {
+.navbar-link:hover, .btn-launcher:hover {
   color: white;
   background-color: rgba(255, 145, 0,0.5);
+}
+
+.btn-launcher {
+  font-size: 2rem;
+  border-radius: 8px;
 }
 
 .navbar-link:first-child {
@@ -66,6 +146,7 @@
 }
 
 .social-link {
+  cursor: pointer;
   font-size: 1.5rem;
   padding: 8px;
   box-shadow: inset 0 0 4px 4px rgba(255,255,255,0), 0 2px 4px 0 rgba(0,0,0,0.2);
@@ -105,6 +186,65 @@
 
 .sl-discord {
   background-color: rgb(93,116,197);
+}
+
+.sostienici-info, .oppure {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.sostienici-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sostienici-postepay {
+  font-family: Montserrat;
+}
+
+.sostienici-button {
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  padding: 16px 32px;;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Minecrafter;
+  margin: 8px;
+  cursor: pointer;
+  user-select: none;
+  flex: 1 1 auto;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  font-size: 1.2rem;
+}
+
+.paypal-form {
+  display: flex;
+  
+  flex: 1 1 auto;
+}
+
+.paypal-button {
+  background-color: rgb(0, 112, 186);
+  appearance: none;
+  border: none;
+  
+  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.patreon-button {
+  background-color: orange;
+}
+
+.tos-label {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
 }
 
 @media screen and (max-width: 600px) {

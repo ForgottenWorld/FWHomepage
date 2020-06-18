@@ -5,7 +5,7 @@ import { faFacebook, faTwitter, faInstagram, faTelegram, faDiscord, faTeamspeak 
 export default function SocialLinks() {
     return (
         <div className="social-links">
-            <div className="social-link sl-teamspeak" onClick={() => window.open("https://discord.gg/HdXcnBC", "_blank")}>
+            <div className="social-link sl-teamspeak" onClick={() => window.open("ts3server://ts3.forgottenworld.it", "_blank")}>
                 <FontAwesomeIcon icon={faTeamspeak}></FontAwesomeIcon>
             </div>
             <div className="social-link sl-twitter" onClick={() => window.open("https://twitter.com/forgottentweet", "_blank")}>

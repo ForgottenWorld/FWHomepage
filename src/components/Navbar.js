@@ -2,22 +2,23 @@ import React from 'react';
 import NavbarLink from './NavbarLink';
 
 /*
-       Link ai vari social (twitter, fb, instagram, telegram e discord)
+    https://forgottenworld.it/launcher/index.html
+    https://forgottenworld.it/sostienici.html
 */
-export default function Navbar() {
+export default function Navbar(props) {
     const menus = [
-        {name: "Forum", url: "https://forum.forgottenworld.it"},
-        {name: "Wiki", url: "https://wiki.forgottenworld.it"},
-        {name: "Store", url: "https://forgotten-world.tebex.io/"},
-        {name: "Status", url: "https://status.forgottenworld.it"},
-        {name: "Votaci", url: "https://www.minecraft-italia.it/server/forgottenworld"},
-        {name: "Launcher", url: "https://forgottenworld.it/launcher/index.html"},
-        {name: "Sostienici", url: "https://forgottenworld.it/sostienici.html"}
+        {name: "Forum", url: "https://forum.forgottenworld.it", action: null},
+        {name: "Wiki", url: "https://wiki.forgottenworld.it", action: null},
+        {name: "Store", url: "https://forgotten-world.tebex.io/", action: null},
+        {name: "Status", url: "https://status.forgottenworld.it", action: null},
+        {name: "Votaci", url: "https://www.minecraft-italia.it/server/forgottenworld", action: null},
+        {name: "Launcher", url: null, action: 1},
+        {name: "Sostienici", url: "https://www.patreon.com/ForgottenWorldCommunity", action: null } //2
     ]
   
     return (
         <div className="navbar">
-            {menus.map((m, i) => <NavbarLink key={"nbl"+i} name={m.name} url={m.url}></NavbarLink>)}
+            {menus.map((m, i) => <NavbarLink pageSetter={props.pageSetter} key={"nbl"+i} name={m.name} url={m.url} action={m.action}></NavbarLink>)}
         </div>
     );
 }
