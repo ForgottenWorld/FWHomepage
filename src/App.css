@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Minecrafter;
+  src: url(./fonts/minecrafter.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100vw;
+  height: 100vh;
+  background: url(bg.jpg);
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  width: 420px;
+}
+
+.logo-container {
+  display: flex;
+  flex: 0 0 320;
+  padding: 32px;
+  justify-content: center;
+}
+
+.navbar {
+  font-family: Minecrafter;
+  font-size: 1.4rem;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.navbar-link {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px 32px;
+  cursor: pointer;
+  user-select: none;
+  color: orange;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  transition: background-color linear 100ms, color linear 100ms;
+}
+
+.navbar-link:hover {
   color: white;
+  background-color: rgba(255, 145, 0,0.5);
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-link:first-child {
+  border-radius: 8px 0 0 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-link:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.social-links {
+  display: flex;
+  margin-top: 64px;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  padding: 8px;
+  box-shadow: inset 0 0 4px 4px rgba(255,255,255,0), 0 2px 4px 0 rgba(0,0,0,0.4);
+  margin: 8px;
+  display: flex;
+  flex: 0 0 1.8rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: white;
+  transition: box-shadow linear 100ms;
+}
+
+.social-link:hover {
+  box-shadow: inset 0 0px 4px 4px rgba(255,255,255,0.1), 0 2px 4px 0 rgba(0,0,0,0.4);
+}
+
+.sl-twitter {
+  background-color: rgb(22,160,241);
+}
+
+.sl-facebook {
+  background-color: rgb(66,103,178);
+}
+
+.sl-instagram {
+  background-color: crimson;
+}
+
+.sl-telegram {
+  background-color: rgb(46,166,226);
+}
+
+.sl-discord {
+  background-color: rgb(93,116,197);
+}
+
+@media screen and (max-width: 600px) {
+
 }
