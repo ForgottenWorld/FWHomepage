@@ -7,7 +7,6 @@ import NavbarLink from './NavbarLink';
 export default function Navbar() {
     const menus = [
         {name: "Forum", url: "https://forum.forgottenworld.it"},
-        {name: "Ts", url: "ts3server://ts3.forgottenworld.it"},
         {name: "Wiki", url: "https://wiki.forgottenworld.it"},
         {name: "Store", url: "https://forgotten-world.tebex.io/"},
         {name: "Status", url: "https://status.forgottenworld.it"},
