@@ -25,12 +25,12 @@ function App() {
       <div className="logo-container">
         <img className={`logo ${curPage ? "shrunk" : ""}`} alt="ForgottenWorld Logo" src={logo} />
       </div>
-      <Navbar pageSetter={setCurPage}></Navbar>
+      <Navbar pageSetter={setCurPage} />
       {curPage
         ? getPage(curPage)
         : null
       }
-      <SocialLinks></SocialLinks>
+      <SocialLinks />
     </div>
   );
 }
