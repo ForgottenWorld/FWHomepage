@@ -190,6 +190,10 @@
   background-color: rgb(93,116,197);
 }
 
+.sl-github {
+  background-color: rgb(36,41,46);
+}
+
 .sostienici-info, .oppure {
   display: flex;
   text-align: center;
