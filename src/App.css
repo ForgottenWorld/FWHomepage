@@ -270,6 +270,7 @@
 input[type='checkbox'] {
   appearance: none;
   border: none;
+  cursor: pointer;
   width: 24px;
   height: 24px;
   display: flex;
