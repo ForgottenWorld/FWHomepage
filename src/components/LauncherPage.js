@@ -21,7 +21,7 @@ export default function LauncherPage(props) {
             </div>
             <div className="launcher-info">Scegli il tuo sistema operativo</div>
             <div className="tos-label">
-                Ho letto il e accetto i&nbsp;
+                Ho letto e accetto i&nbsp;
                     <span 
                         className="tos" 
                         onClick={() => window.open("https://wiki.forgottenworld.it/main/Termini", "_blank")}>Termini di Servizio</span>&nbsp;
