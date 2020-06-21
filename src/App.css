@@ -28,7 +28,7 @@
 
 .logo {
   display: flex;
-  width: 420px;
+  width: 380px;
   opacity: 1;
   transition: width linear 100ms, height linear 100ms, opacity linear 100ms;
 }
@@ -157,7 +157,6 @@
   margin-top: 64px;
   justify-content: space-between;
   box-sizing: content-box;
-  max-width: none;
 }
 
 .social-link {
@@ -205,6 +204,10 @@
 
 .sl-github {
   background-color: rgb(36,41,46);
+}
+
+.sl-steam {
+  background-color: rgba(1,123,176);
 }
 
 .sostienici-info, .oppure {
@@ -299,7 +302,7 @@ input[type='checkbox']:checked::after {
 
 @media screen and (max-width: 1100px) {
   .logo {
-    width: 300px;
+    width: 240px;
   }
 
   .app {
@@ -326,6 +329,7 @@ input[type='checkbox']:checked::after {
   .social-link {
     font-size: 1.1rem;
     padding: 6px;
+    margin: 6px;
   }
 
   .pconly {
