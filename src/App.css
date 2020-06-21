@@ -323,6 +323,11 @@ input[type='checkbox']:checked::after {
     padding-bottom: 24px;
   }
 
+  .social-link {
+    font-size: 1.1rem;
+    padding: 6px;
+  }
+
   .pconly {
     display: none;
   }
