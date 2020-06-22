@@ -34,6 +34,7 @@ function App() {
           : null
         }
         <SocialLinks />
+        <div className="tos-footer" onClick={() => window.open("https://wiki.forgottenworld.it/main/Termini", "_blank")}>Termini di Servizio</div>
       </div>
     </div>
   );
