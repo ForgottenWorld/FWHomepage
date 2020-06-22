@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import SocialLinks from './components/SocialLinks';
 import LauncherPage from './components/LauncherPage';
 import SostieniciPage from './components/SostieniciPage';
+import AcmeBar from './components/AcmeBar';
 
 function App() {
   const [curPage, setCurPage] = useState(null);
@@ -22,15 +23,18 @@ function App() {
 
   return (
     <div className="app">
-      <div className="logo-container">
-        <img className={`logo ${curPage ? "shrunk" : ""}`} alt="ForgottenWorld Logo" src={logo} />
+      <AcmeBar />
+      <div className="app-body">
+        <div className="logo-container">
+          <img className={`logo ${curPage ? "shrunk" : ""}`} alt="ForgottenWorld Logo" src={logo} />
+        </div>
+        <Navbar pageSetter={setCurPage} />
+        {curPage
+          ? getPage(curPage)
+          : null
+        }
+        <SocialLinks />
       </div>
-      <Navbar pageSetter={setCurPage} />
-      {curPage
-        ? getPage(curPage)
-        : null
-      }
-      <SocialLinks />
     </div>
   );
 }

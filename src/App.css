@@ -20,16 +20,23 @@
 .app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
   background: url(bg.jpg);
+}
+
+.app-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
 }
 
 .logo {
   display: flex;
   width: 380px;
   opacity: 1;
+  user-select: none;
   transition: width linear 100ms, height linear 100ms, opacity linear 100ms;
 }
 
@@ -300,6 +307,53 @@ input[type='checkbox']:checked::after {
   opacity: 1;
 }
 
+.acme-bar {
+  display: flex;
+  font-family: Minecrafter;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.6);
+}
+
+.acme-bar a {
+  text-decoration: none;
+  padding: 8px 12px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  background-color: rgba(255,255,255,0);
+  transition: background-color linear 200ms;
+  text-shadow: 0 2px 1px rgba(0,0,0,0.2);
+}
+
+.acme-bar a:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.acme-bar .left-links {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.acme-bar .right-links {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.acme-link, .acme-link:visited {
+  color: #f55b75;
+}
+
+.vgz-link, .vgz-link:visited {
+  color: greenyellow;
+}
+
+.ffp-link, .ffp-link:visited {
+  color: #b849b0;
+}
+
 @media screen and (max-width: 1100px) {
   .logo {
     width: 240px;
@@ -335,4 +389,30 @@ input[type='checkbox']:checked::after {
   .pconly {
     display: none;
   }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .acme-bar {
+    flex-direction: column;
+  }
+
+  .acme-bar .left-links {
+    flex: 1 1 auto;
+  }
+  
+  .acme-bar .right-links {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .acme-bar a {
+    display: flex;
+    flex: 1 1 auto;
+    font-size:0.8rem;
+    align-items: center;
+  }
+
 }
