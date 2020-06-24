@@ -234,6 +234,10 @@
   background-color: rgba(1,123,176);
 }
 
+.sl-youtube {
+  background-color: rgb(221, 8, 8);
+}
+
 .sostienici-info, .oppure {
   display: flex;
   text-align: center;
@@ -400,7 +404,7 @@ input[type='checkbox']:checked::after {
   .social-link {
     font-size: 1.1rem;
     padding: 6px;
-    margin: 6px;
+    margin: 5px;
   }
 
   .pconly {

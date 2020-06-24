@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faTwitter, faInstagram, faTelegram, faDiscord, faTeamspeak, faGithub, faSteam } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faTwitter, faInstagram, faTelegram, faDiscord, faTeamspeak, faGithub, faSteam, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons'
 
 export default function SocialLinks() {
     return (
@@ -28,6 +28,9 @@ export default function SocialLinks() {
             </div>
             <div className="social-link sl-github" onClick={() => window.open("https://github.com/ForgottenWorld", "_blank")}>
                 <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+            </div>
+            <div className="social-link sl-youtube" onClick={() => window.open("https://www.youtube.com/user/MCITAForgottenWorld/", "_blank")}>
+                <FontAwesomeIcon icon={faYoutubeSquare}></FontAwesomeIcon>
             </div>
         </div>
     );
