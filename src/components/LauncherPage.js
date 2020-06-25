@@ -30,15 +30,15 @@ export default function LauncherPage(props) {
             <div className="launcher-buttons">
                 <div className={`btn-launcher btn-download-windows ${confirmed ? "" : "disabled"}`}  onClick={() => {
                     if (confirmed)
-                        window.open("https://forgottenworld.it/launcher/ForgottenWorld.exe", "_blank")}}>
+                        window.open("https://github.com/ForgottenWorld/FWHomepage/releases/download/v1.0/ForgottenWorld.exe", "_blank")}}>
                     <FontAwesomeIcon icon={faWindows}></FontAwesomeIcon></div>
                 <div className={`btn-launcher btn-download-mac ${confirmed ? "" : "disabled"}`} onClick={() => {
                     if (confirmed)
-                        window.open("https://forgottenworld.it/launcher/ForgottenWorld.jar", "_blank")}}>
+                        window.open("https://github.com/ForgottenWorld/FWHomepage/releases/download/v1.1/ForgottenWorld.jar", "_blank")}}>
                     <FontAwesomeIcon icon={faApple}></FontAwesomeIcon></div>
                 <div className={`btn-launcher btn-download-linux ${confirmed ? "" : "disabled"}`} onClick={() => {
                     if (confirmed)
-                        window.open("https://forgottenworld.it/launcher/ForgottenWorld.jar", "_blank")}}>
+                        window.open("https://github.com/ForgottenWorld/FWHomepage/releases/download/v1.1/ForgottenWorld.jar", "_blank")}}>
                     <FontAwesomeIcon icon={faLinux}></FontAwesomeIcon></div>
             </div>
         </div>
