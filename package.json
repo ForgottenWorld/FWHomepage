@@ -1,7 +1,7 @@
 {
   "name": "fwhomepage",
   "version": "0.1.0",
-  "homepage": "https://forgottenworld.github.io/FWHomepage/",
+  "homepage": "https://forgottenworld.it/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp CNAME build/CNAME",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
