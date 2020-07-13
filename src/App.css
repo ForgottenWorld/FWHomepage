@@ -405,9 +405,12 @@ input[type='checkbox']:checked::after {
   }
 
   .social-link {
-    font-size: 1.1rem;
+    flex: 0 0 0.9rem;
+    font-size: 0.9rem;
     padding: 6px;
-    margin: 5px;
+    height: 0.9rem;
+    justify-content: center;
+    margin: 4px;
   }
 
   .pconly {
