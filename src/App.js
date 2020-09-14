@@ -29,10 +29,10 @@ function App() {
           <img className={`logo ${curPage ? "shrunk" : ""}`} alt="ForgottenWorld Logo" src={logo} />
         </div>
         <Navbar pageSetter={setCurPage} />
-        {curPage
-          ? getPage(curPage)
-          : null
-        }
+          {curPage
+            ? getPage(curPage)
+            : null
+          }
         <SocialLinks />
         <div className="tos-footer" onClick={() => window.open("https://wiki.forgottenworld.it/main/Termini", "_blank")}>Termini di Servizio</div>
       </div>
