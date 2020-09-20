@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import logo from './logo.png';
 import Navbar from './components/Navbar';
 import SocialLinks from './components/SocialLinks';
 import LauncherPage from './components/LauncherPage';
@@ -26,7 +25,7 @@ function App() {
       <AcmeBar />
       <div className="app-body">
         <div className="logo-container">
-          <img className={`logo ${curPage ? "shrunk" : ""}`} alt="ForgottenWorld Logo" src={logo} />
+          <img className={`logo ${curPage ? "shrunk" : ""}`} alt="ForgottenWorld Logo" src="https://cdn.statically.io/gh/ForgottenWorld/images/58b85a5a/logo.webp" />
         </div>
         <Navbar pageSetter={setCurPage} />
           {curPage
