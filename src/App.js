@@ -5,6 +5,7 @@ import SocialLinks from './components/SocialLinks';
 import LauncherPage from './components/LauncherPage';
 import SostieniciPage from './components/SostieniciPage';
 import AcmeBar from './components/AcmeBar';
+import ts3logo from './img/tslogo.svg';
 
 function App() {
   const [curPage, setCurPage] = useState(null);
@@ -32,6 +33,7 @@ function App() {
             ? getPage(curPage)
             : null
           }
+        <a href="ts3server://ts3.forgottenworld.it"><img className="ts3-logo" src={ts3logo} alt="TeamSpeak Logo"></img></a>
         <SocialLinks />
         <div className="tos-footer" onClick={() => window.open("https://wiki.forgottenworld.it/main/Termini", "_blank")}>Termini di Servizio</div>
       </div>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faTwitter, faInstagram, faTelegram, faDiscord, faTeamspeak, faGithub, faSteam, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faTwitter, faInstagram, faTelegram, faDiscord, faGithub, faSteam, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 export default function SocialLinks() {
     return (
         <div className="social-links">
-            <div className="social-link sl-teamspeak" onClick={() => window.open("ts3server://ts3.forgottenworld.it", "_blank")}>
+{/*             <div className="social-link sl-teamspeak" onClick={() => window.open("ts3server://ts3.forgottenworld.it", "_blank")}>
                 <FontAwesomeIcon icon={faTeamspeak}></FontAwesomeIcon>
-            </div>
+            </div> */}
             <div className="social-link sl-twitter" onClick={() => window.open("https://twitter.com/forgottentweet", "_blank")}>
                 <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
             </div>

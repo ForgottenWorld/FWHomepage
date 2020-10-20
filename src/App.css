@@ -173,7 +173,6 @@
 
 .social-links {
   display: flex;
-  margin-top: 64px;
   justify-content: space-between;
   box-sizing: content-box;
 }
@@ -369,6 +368,11 @@ input[type='checkbox']:checked::after {
 
 .ffp-link, .ffp-link:visited {
   color: #b849b0;
+}
+
+.ts3-logo {
+  margin: 72px 0 24px 0;
+  width: 200px;
 }
 
 @media screen and (max-width: 1100px) {
