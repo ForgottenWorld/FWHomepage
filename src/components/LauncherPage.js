@@ -1,25 +1,31 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindows, faApple, faLinux } from '@fortawesome/free-brands-svg-icons';
-import { faTimes, } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function LauncherPage(props) {
 
     const close = () => props.pageSetter(0)
     const [confirmed, setConfirmed] = useState(false)
+    const [fadingOut, setFadingOut] = useState(false)
 
     const handleChange = (event) => setConfirmed(event.target.checked)
 
+    const fadeOut = () => {
+        setFadingOut(true);
+        setTimeout(() => {
+            close();
+            setFadingOut(false);
+        }, 300);
+    }
+
     return (
-        <div className={`page launcher-page`}>
-            <div className="page-actions">
-                <FontAwesomeIcon 
-                    className="close-page" 
-                    icon={faTimes}
-                    onClick={() => close()}></FontAwesomeIcon>
-            </div>
-            <div className="launcher-info">Scegli il tuo sistema operativo</div>
+        <div className={`page launcher-page ${fadingOut ? "fading" : ""}`}>
+            <FontAwesomeIcon 
+                className="close-page" 
+                icon={faChevronCircleUp}
+                onClick={() => fadeOut()} />
             <div className="tos-label">
                 Ho letto e accetto i&nbsp;
                     <span 

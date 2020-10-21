@@ -1,12 +1,24 @@
-@keyframes growFadeIn {
+@keyframes fadeInDown {
   0% {
+    margin-bottom: -64px;
     opacity: 0;
-    max-height: 0px;
   }
 
   100% {
+    margin-bottom: 0px;
     opacity: 1;
-    max-height: 400px;
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    margin-bottom: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    margin-bottom: -64px;
+    opacity: 0;
   }
 }
 
@@ -21,10 +33,15 @@
 
 .app-body {
   display: flex;
-  flex-direction: column;
+  flex: 1 1 auto;
   align-items: center;
   justify-content: center;
-  flex: 1 1 auto;
+}
+
+.app-main-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
@@ -53,15 +70,18 @@
   font-family: Minecrafter;
   font-size: 1rem;
   background-color: rgba(0,0,0,0.5);
-  padding: 20px 32px;
-  overflow: hidden;
   color: white;
-  margin-top: 32px;
-  max-width: 600px;
+  box-sizing: border-box;
   border-radius: 8px;
   text-shadow: 0 2px 3px rgba(0,0,0,0.2);
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
-  animation: growFadeIn linear 200ms;
+  animation: fadeInDown ease-out 300ms;
+  z-index: 800;
+  position: relative;
+}
+
+.page.fading {
+  animation: fadeOutUp ease-out 300ms;
 }
 
 .page-actions {
@@ -73,9 +93,13 @@
 
 .close-page {
   color: #cccccc;
-  font-size: 1.2rem;
+  font-size: 2rem;
   transition: color linear 100ms;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: -50px;
+  z-index: 1000;
 }
 
 .close-page:hover {
@@ -87,11 +111,14 @@
   font-size: 1.2rem;
   display: flex;
   border-radius: 8px;
+  margin-bottom: 16px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
 .launcher-page {
-  min-width: 700px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
 } 
 
 .launcher-info {
@@ -103,7 +130,6 @@
 .launcher-buttons {
   display: flex;
   justify-content: space-around;
-  padding: 16px;
 }
 
 .tos {
@@ -117,6 +143,7 @@
   font-size: 1.1rem;
   margin-top: 8px;
   font-weight: 600;
+  padding-bottom: 32px;
   opacity: 0.75;
   cursor: pointer;
   text-shadow: 0 1px 2px rgba(0,0,0,0.4);
@@ -135,32 +162,28 @@
   padding: 20px 32px;
   cursor: pointer;
   user-select: none;
-  color: #dddddd;
+  color: #bbbbbb;
   text-shadow: 0 2px 3px rgba(0,0,0,0.2);
-  transition: background-color linear 100ms, color linear 100ms;
+  transition: color linear 100ms;
 }
 
 .navbar-link:hover, .btn-launcher:hover {
   color: white;
-  background-color: rgba(255, 145, 0,0.5);
 }
 
 .btn-launcher {
   font-size: 1.8rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+  background-color: transparent;
 }
 
 .btn-launcher.disabled {
   color: #bbbbbb;
   cursor: default;
-  background-color: rgba(0,0,0,0.2);
 }
 
 .btn-launcher.disabled:hover {
   color: #bbbbbb;
   cursor: default;
-  background-color: rgba(0,0,0,0.2);
 }
 
 .navbar-link:first-child {
@@ -288,9 +311,10 @@
 
 .tos-label {
   display: flex;
+  padding-left: 32px;
+  margin-top: 2px;
   justify-content: center;
   align-items: center;
-  padding: 32px;
 }
 
 input[type='checkbox'] {
@@ -299,6 +323,8 @@ input[type='checkbox'] {
   cursor: pointer;
   width: 24px;
   height: 24px;
+  margin-top: 0px;
+  margin-left: 8px;
   display: flex;
   justify-content: center;
   align-items: center;

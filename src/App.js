@@ -25,17 +25,20 @@ function App() {
     <div className="app">
       <AcmeBar />
       <div className="app-body">
-        <div className="logo-container">
-          <img className={`logo ${curPage ? "shrunk" : ""}`} alt="ForgottenWorld Logo" src="https://cdn.statically.io/gh/ForgottenWorld/images/58b85a5a/logo.webp" />
-        </div>
-        <Navbar pageSetter={setCurPage} />
-          {curPage
-            ? getPage(curPage)
-            : null
+        <div className="app-main-col">
+          <div className="logo-container">
+            <img className="logo" alt="ForgottenWorld Logo" src="https://cdn.statically.io/gh/ForgottenWorld/images/58b85a5a/logo.webp" />
+          </div>
+          <Navbar pageSetter={setCurPage} />
+          {
+            curPage
+              ? getPage(curPage)
+              : null
           }
-        <a href="ts3server://ts3.forgottenworld.it"><img className="ts3-logo" src={ts3logo} alt="TeamSpeak Logo"></img></a>
-        <SocialLinks />
-        <div className="tos-footer" onClick={() => window.open("https://wiki.forgottenworld.it/main/Termini", "_blank")}>Termini di Servizio</div>
+          <a href="ts3server://ts3.forgottenworld.it"><img className="ts3-logo" src={ts3logo} alt="TeamSpeak Logo"></img></a>
+          <SocialLinks />
+          <div className="tos-footer" onClick={() => window.open("https://wiki.forgottenworld.it/main/Termini", "_blank")}>Termini di Servizio</div>
+        </div>
       </div>
     </div>
   );
