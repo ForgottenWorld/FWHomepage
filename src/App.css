@@ -1,6 +1,6 @@
 @keyframes fadeInDown {
   0% {
-    margin-bottom: -64px;
+    margin-bottom: -70px;
     opacity: 0;
   }
 
@@ -17,7 +17,7 @@
   }
 
   100% {
-    margin-bottom: -64px;
+    margin-bottom: -70px;
     opacity: 0;
   }
 }
@@ -110,6 +110,7 @@
   font-family: Minecrafter;
   font-size: 1.2rem;
   display: flex;
+  height: 70px;
   border-radius: 8px;
   margin-bottom: 16px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
@@ -117,6 +118,7 @@
 
 .launcher-page {
   width: 100%;
+  height: 70px;
   flex-direction: row;
   justify-content: space-between;
 } 
@@ -164,11 +166,15 @@
   user-select: none;
   color: #bbbbbb;
   text-shadow: 0 2px 3px rgba(0,0,0,0.2);
-  transition: color linear 100ms;
+  transition: background-color linear 100ms, color linear 100ms;
 }
 
 .navbar-link:hover, .btn-launcher:hover {
   color: white;
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 145, 0, 0.5)
 }
 
 .btn-launcher {
@@ -402,6 +408,30 @@ input[type='checkbox']:checked::after {
 }
 
 @media screen and (max-width: 1100px) {
+  @keyframes fadeInDown {
+    0% {
+      margin-bottom: -208px;
+      opacity: 0;
+    }
+  
+    100% {
+      margin-bottom: 0px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOutUp {
+    0% {
+      margin-bottom: 0px;
+      opacity: 1;
+    }
+  
+    100% {
+      margin-bottom: -208px;
+      opacity: 0;
+    }
+  }
+
   .logo {
     width: 240px;
   }
@@ -410,9 +440,14 @@ input[type='checkbox']:checked::after {
     justify-content: space-around;
   }
 
+  .app-main-col {
+    width: 90%;
+  }
+
   .navbar {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
+    height: auto;
   }
 
   .navbar-link:first-child {
@@ -436,8 +471,30 @@ input[type='checkbox']:checked::after {
     margin: 4px;
   }
 
-  .pconly {
-    display: none;
+  .launcher-page {
+    padding: 24px 0 8px 0;
+    flex-direction: column;
+    height: 208px;
+  }
+
+  .launcher-buttons {
+    justify-content: center;
+  }
+
+  .close-page {
+    right: calc(50% - 1rem);
+    top: calc(100% + 1rem);
+    bottom: -20px;
+  }
+
+  .tos-label {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .tos-label input {
+    margin-left: 0;
   }
 
   .tos-footer {
@@ -446,25 +503,9 @@ input[type='checkbox']:checked::after {
 }
 
 @media screen and (max-width: 600px) {
-  .acme-bar {
-    flex-direction: column;
-  }
-
-  .acme-bar .left-links {
-    flex: 1 1 auto;
-  }
-  
-  .acme-bar .right-links {
-    flex: 1 1 auto;
-    justify-content: flex-start;
-    flex-direction: column;
-  }
 
   .acme-bar a {
-    display: flex;
-    flex: 1 1 auto;
     font-size:0.6rem;
-    align-items: center;
   }
 
 }
