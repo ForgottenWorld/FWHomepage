@@ -6,8 +6,11 @@ import LauncherPage from './components/LauncherPage';
 import SostieniciPage from './components/SostieniciPage';
 import AcmeBar from './components/AcmeBar';
 import ts3logo from './img/tslogo.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
+  const news = "Benvenuti su ForgottenWorld!"
   const [curPage, setCurPage] = useState(null);
 
   const getPage = (pageId) => {
@@ -28,6 +31,11 @@ function App() {
         <div className="app-main-col">
           <div className="logo-container">
             <img className="logo" alt="ForgottenWorld Logo" src="https://cdn.statically.io/gh/ForgottenWorld/images/58b85a5a/logo.webp" />
+          </div>
+          <div className="news-container-container">
+            <FontAwesomeIcon icon={faCircle} />
+            <div className="news-container"><div className="news">{news}</div></div>
+            <FontAwesomeIcon icon={faCircle} />
           </div>
           <Navbar pageSetter={setCurPage} />
           {
