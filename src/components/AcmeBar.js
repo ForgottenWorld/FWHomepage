@@ -11,7 +11,7 @@ export default function AcmeBar() {
             </div>
             <div className="right-links">
                 <a href="https://videogamezone.eu/" className="vgz-link">VideogameZone</a>
-                <a href="https://fefox.pro/" className="ffp-link">FeFoX.pro</a>
+                {/* <a href="https://fefox.pro/" className="ffp-link">FeFoX.pro</a> */}
             </div>
         </div>
     )
