@@ -44,6 +44,16 @@
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+  color: #ff9900;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #ff9900;
+}
+
 .logo {
   display: flex;
   width: 380px;
