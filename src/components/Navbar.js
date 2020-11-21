@@ -10,7 +10,7 @@ import NavbarLink from './NavbarLink';
 export default function Navbar(props) {
     const menus = [
         {name: "Forum", url: "https://forum.forgottenworld.it", action: null, pcOnly: false},
-        {name: "Wiki", url: "https://wikinew.forgottenworld.it/mc/Forgotten_World", action: null, pcOnly: false},
+        {name: "Wiki", url: "https://wiki.forgottenworld.it/mc/Forgotten_World", action: null, pcOnly: false},
         /* {name: "Store", url: "https://forgotten-world.tebex.io/", action: null, pcOnly: false}, */
         {name: "Status", url: "https://status.forgottenworld.it", action: null, pcOnly: false},
         /* {name: "Votaci", url: "https://www.minecraft-italia.it/server/forgottenworld", action: null, pcOnly: false}, */
