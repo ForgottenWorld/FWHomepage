@@ -57,6 +57,7 @@ a:visited {
 .logo {
   display: flex;
   width: 380px;
+  align-self: flex-start;
   opacity: 1;
   user-select: none;
   transition: width linear 100ms, height linear 100ms, opacity linear 100ms;
@@ -69,7 +70,6 @@ a:visited {
 
 .logo-container {
   display: flex;
-  flex: 0 0 320;
   padding: 32px;
   justify-content: center;
 }
