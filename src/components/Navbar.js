@@ -14,7 +14,7 @@ export default function Navbar(props) {
         /* {name: "Store", url: "https://forgotten-world.tebex.io/", action: null, pcOnly: false}, */
         {name: "Status", url: "https://status.forgottenworld.it", action: null, pcOnly: false},
         /* {name: "Votaci", url: "https://www.minecraft-italia.it/server/forgottenworld", action: null, pcOnly: false}, */
-        {name: "Launcher", url: null, action: 1, pcOnly: true},
+        /* {name: "Launcher", url: null, action: 1, pcOnly: true}, */
         {name: "Sostienici", url: "https://www.patreon.com/ForgottenWorldCommunity", action: null, pcOnly: false} //2
     ]
   
