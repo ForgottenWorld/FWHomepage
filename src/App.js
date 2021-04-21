@@ -30,7 +30,7 @@ function App() {
       <div className="app-body">
         <div className="app-main-col">
           <div className="logo-container">
-            <img className="logo" alt="ForgottenWorld Logo" src="https://cdn.statically.io/gh/ForgottenWorld/images/58b85a5a/logo.webp" />
+            <img className="logo" alt="ForgottenWorld Logo" src="https://static.forgottenworld.it/logo.webp" />
           </div>
           <div className="news-container-container">
             <FontAwesomeIcon icon={faCircle} />
