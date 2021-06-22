@@ -24,6 +24,15 @@ function App() {
     }
   }
 
+  const getPayPalDonationButton = () => (
+    <form action="https://www.paypal.com/donate" class="paypal-donation-btn" method="post" target="_top">
+      <input type="hidden" name="hosted_button_id" value="73UG3CVWRSDPW" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/IT/i/btn/btn_donateCC_LG.gif" 
+      border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/en_IT/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+  );
+
   return (
     <div className="app">
       <AcmeBar />
@@ -44,6 +53,7 @@ function App() {
               : null
           }
           <a href="ts3server://ts3.forgottenworld.it"><img className="ts3-logo" src={ts3logo} alt="TeamSpeak Logo"></img></a>
+          { getPayPalDonationButton() }
           <SocialLinks />
           <div className="tos-footer" onClick={() => window.open("https://wiki.forgottenworld.it/main/Termini", "_blank")}>Termini di Servizio</div>
         </div>
