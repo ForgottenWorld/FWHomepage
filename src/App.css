@@ -292,10 +292,13 @@ a:visited {
 
 .sostienici-buttons {
   display: flex;
-  flex-wrap: wrap;
   border-radius: 8px;
   overflow: hidden;
-  justify-content: space-between;
+}
+
+.sostienici-buttons > form, .sostienici-buttons > div {
+  flex: 1 0 50%;
+  min-width: 300px;
 }
 
 .sostienici-postepay {
@@ -305,28 +308,30 @@ a:visited {
 .sostienici-button {
   color: white;
   display: flex;
+  box-sizing: border-box;
   padding: 24px 16px;
   align-items: center;
-  justify-content: space-between;
   font-family: Minecrafter;
   cursor: pointer;
   user-select: none;
-  flex: 1 1 auto;
   text-shadow: 0 2px 3px rgba(0,0,0,0.2);
   font-size: 1rem;
 }
 
+.sostienici-button span {
+  flex: 1 1 auto;
+  text-align: right;
+}
+
 .paypal-form {
   display: flex;
-  
-  flex: 1 1 auto;
 }
 
 .paypal-button {
   background-color: rgb(0, 112, 186);
   appearance: none;
   border: none;
-  
+  width: 100%;
   text-shadow: 0 2px 3px rgba(0,0,0,0.2);
 }
 
@@ -560,6 +565,9 @@ input[type='checkbox']:checked::after {
 
   .tos-footer {
     margin-bottom: 16px;
+  }
+  .sostienici-buttons {
+    flex-wrap: wrap;
   }
 }
 
