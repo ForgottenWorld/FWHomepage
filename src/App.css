@@ -276,18 +276,25 @@ a:visited {
   font-size: 1.35rem;
 }
 
+.sostienici-page {
+  width: 100%;
+}
+
+
 .sostienici-info, .oppure {
   display: flex;
   text-align: center;
   justify-content: center;
   margin-bottom: 24px;
   font-size: 1.3rem;
-  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  text-shadow: 0 2px 3px #00000033;
 }
 
 .sostienici-buttons {
   display: flex;
   flex-wrap: wrap;
+  border-radius: 8px;
+  overflow: hidden;
   justify-content: space-between;
 }
 
@@ -297,13 +304,11 @@ a:visited {
 
 .sostienici-button {
   color: white;
-  border-radius: 4px;
   display: flex;
-  padding: 16px 32px;;
+  padding: 24px 16px;
   align-items: center;
   justify-content: space-between;
   font-family: Minecrafter;
-  margin: 8px;
   cursor: pointer;
   user-select: none;
   flex: 1 1 auto;
@@ -578,8 +583,4 @@ input[type='checkbox']:checked::after {
     font-size:1rem;
   }
 
-}
-
-.paypal-donation-btn {
-  
 }
