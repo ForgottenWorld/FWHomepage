@@ -8,9 +8,9 @@ export default function SocialLinks() {
 {/*             <div className="social-link sl-teamspeak" onClick={() => window.open("ts3server://ts3.forgottenworld.it", "_blank")}>
                 <FontAwesomeIcon icon={faTeamspeak}></FontAwesomeIcon>
             </div> */}
-            <div className="social-link sl-twitter" onClick={() => window.open("https://twitter.com/forgottentweet", "_blank")}>
+            {/* <div className="social-link sl-twitter" onClick={() => window.open("https://twitter.com/forgottentweet", "_blank")}>
                 <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
-            </div>
+            </div> */}
             <div className="social-link sl-facebook" onClick={() => window.open("https://www.facebook.com/ForgottenWorldCommunity/", "_blank")}>
                 <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
             </div>
@@ -24,12 +24,12 @@ export default function SocialLinks() {
                 <FontAwesomeIcon icon={faSteam}></FontAwesomeIcon>
             </div>
             <br />
-            <div className="social-link sl-discord" onClick={() => window.open("https://discord.gg/HdXcnBC", "_blank")}>
+            <div className="social-link sl-discord" onClick={() => window.open("https://discord.com/invite/nfegY2Wv", "_blank")}>
                 <FontAwesomeIcon icon={faDiscord}></FontAwesomeIcon>
             </div>
-            <div className="social-link sl-reddit" onClick={() => window.open("https://www.reddit.com/r/ForgottenWorldIta/", "_blank")}>
+            {/* <div className="social-link sl-reddit" onClick={() => window.open("https://www.reddit.com/r/ForgottenWorldIta/", "_blank")}>
                 <FontAwesomeIcon icon={faReddit}></FontAwesomeIcon>
-            </div>
+            </div> */}
             <div className="social-link sl-github" onClick={() => window.open("https://github.com/ForgottenWorld", "_blank")}>
                 <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
             </div>
