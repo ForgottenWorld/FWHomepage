@@ -1,6 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faTwitter, faInstagram, faTelegram, faDiscord, faGithub, faSteam, faYoutube, faReddit } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faInstagram, faTelegram, faDiscord, faGithub, faSteam, faYoutube } from '@fortawesome/free-brands-svg-icons'
+
+/* , faTwitter,faReddit */
 
 export default function SocialLinks() {
     return (
