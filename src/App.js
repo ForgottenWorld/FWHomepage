@@ -7,10 +7,10 @@ import SostieniciPage from './components/SostieniciPage';
 import AcmeBar from './components/AcmeBar';
 import ts3logo from './img/tslogo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faCopy } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
-  const news = <span><a target="blank" href="https://forum.forgottenworld.it/t/apertura-server-riepilogo/5719">Alle 21.00 aprirà Jàtuldar, l'ottava era di Forgotten World!</a></span>
+  const news = <span><a target="blank" href="https://forum.forgottenworld.it/t/apertura-server-riepilogo/5719">Entra in Jàtuldar, l'ottava era di Forgotten World!</a></span>
   const [curPage, setCurPage] = useState(null);
 
   const getPage = (pageId) => {
@@ -31,6 +31,12 @@ function App() {
         <div className="app-main-col">
           <div className="logo-container">
             <img className="logo" alt="ForgottenWorld Logo" src="https://static.forgottenworld.it/logo.webp" />
+          </div>
+          <div className="server-link">
+            mc.forgottenworld.it:27856
+            <span onClick={() => navigator.clipboard.writeText("mc.forgottenworld.it:27856")}>
+              <FontAwesomeIcon icon={faCopy} />
+            </span>
           </div>
           <div className="news-container-container">
             <FontAwesomeIcon icon={faCircle} />
