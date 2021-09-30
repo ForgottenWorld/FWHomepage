@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
-  const news = <span><a target="blank" href="https://forum.forgottenworld.it/t/amagami-fondazione-citta-supernomachia-obiettivi-riv/4376/7">Pubblicati i requisiti per fondare una città!</a>&nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;<a target="blank" href="https://forum.forgottenworld.it/t/supernomachia-parte-1-linizio-della-fine/4378/2">Leggi la Supernomachia!</a></span>
+  const news = <span><a target="blank" href="https://forum.forgottenworld.it/t/apertura-server-riepilogo/5719">Alle 21.00 aprirà Jàtuldar, l'ottava era di Forgotten World!</a></span>
   const [curPage, setCurPage] = useState(null);
 
   const getPage = (pageId) => {
