@@ -26,7 +26,7 @@ export default function SocialLinks() {
                 <FontAwesomeIcon icon={faSteam}></FontAwesomeIcon>
             </div>
             <br />
-            <div className="social-link sl-discord" onClick={() => window.open("https://discord.com/invite/nfegY2Wv", "_blank")}>
+            <div className="social-link sl-discord" onClick={() => window.open("https://discord.gg/ByMUWbEJB9", "_blank")}>
                 <FontAwesomeIcon icon={faDiscord}></FontAwesomeIcon>
             </div>
             {/* <div className="social-link sl-reddit" onClick={() => window.open("https://www.reddit.com/r/ForgottenWorldIta/", "_blank")}>
