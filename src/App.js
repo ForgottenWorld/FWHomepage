@@ -33,8 +33,8 @@ function App() {
             <img className="logo" alt="ForgottenWorld Logo" src="https://static.forgottenworld.it/logo.webp" />
           </div>
           <div className="server-link">
-            mc.forgottenworld.it:27856
-            <span onClick={() => navigator.clipboard.writeText("mc.forgottenworld.it:27856")}>
+            jatuldar.forgottenworld.it
+            <span onClick={() => navigator.clipboard.writeText("jatuldar.forgottenworld.it")}>
               <FontAwesomeIcon icon={faCopy} />
             </span>
           </div>
